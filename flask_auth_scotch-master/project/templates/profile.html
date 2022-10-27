@@ -3,7 +3,67 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <h1 class="title">
-  Welcome, {{ name }}!
+  Bons estudos, {{ name }}!
 </h1>
+
+<div class="container">
+
+    <div style="display:inline-flex">
+        <div style="padding:10px ;">
+            <button id="start_stop" onclick="startTimer(1500,'Bom descanso! Hora do café')" class="button">Iniciar foco</button>
+        </div>
+        <div style="padding:10px ;">
+            <button id="start_stop" onclick="startTimer(300,'Coloca um croped e reage')" class="button">Descanso curto</button>
+        </div>
+        <div style="padding:10px ;">
+            <button id="start_stop" onclick="startTimer(600,'Trabalha Jumento')" class="button">Descanso longo</button>
+        </div>
+    </div>
+    
+    <div id="countdown">
+      <!-- <ul>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>Seconds</li>
+      </ul> -->
+
+      <div id="display" style="font-size: 150px; background-color: white; color: black;" ></div>
+    </div>
+  </div>
+
+
+  <script>
+
+    function startTimer(duration,msg) {
+        var timer = duration, minutes, seconds;
+
+        // window.refresh=null;
+        clearInterval(window.refresh)
+
+        var display = document.getElementById('display');
+        
+        window.refresh = setInterval(function () {
+
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var output = minutes + " : " + seconds;
+            display.setHTML(output);
+            // $("title").html(output + " - TimerTimer");
+
+            if (--timer < 0) {
+                display.setHTML("Tempo acabou!");
+                clearInterval(window.refresh);  // exit refresh loop
+                alert(msg);
+            }
+        }, 1000);
+
+    }
+
+  </script>
 {% endblock %}
