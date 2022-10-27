@@ -1,9 +1,0 @@
-CREATE TABLE login_get_Time (
-   id INTEGER PRIMARY KEY,
-   email TEXT UNIQUE,
-   senha INTEGER NOT NULL
- );
-
-INSERT INTO login_get_Time (id, email, senha)
-
-VALUES (1, buda@gmail.com, buda123 );(2, giselly@gmail.com, giselly123)
