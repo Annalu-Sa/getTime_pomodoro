@@ -3,7 +3,7 @@
 from flask import Blueprint, render_template
 from flask_login import login_required, current_user
 
-
+#segmentador, criador de rotas permite agrupar um conjunto de rotas em um determinado arquivo
 main = Blueprint('main', __name__)
 
 # Temos dois blueprints para as nossas rotas

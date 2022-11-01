@@ -1,5 +1,6 @@
 # auth.py
-# Classe para criar páginas de web que apenas usuários autenticados conseguem acessar
+# Classe para criar páginas de web que apenas usuários autenticados conseguem acessar, organização e manutenção 
+
 
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
