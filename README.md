@@ -1,3 +1,2 @@
 # getTime_pomodoro
-getTime is project made by Anna Luisa, Maria Eduarda and Kelly for a class at UFRJ. It's based in pomodoro system.
-professor: Miceli Farias
+getTime é um trabalho realizado por Anna Luisa Sá, Kelly Pinheiro e Maria Eduarda, estudantes da Universidade Federal do Rio de Janeiro, para a matéria Linguagens de Programação ministrada por Claudio Miceli no período 2022.2.
