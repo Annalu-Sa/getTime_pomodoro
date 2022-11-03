@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
 #SQLalchemy trabalha com banco de dados 
 
-# init SQLAlchemy so we can use it later in our models
+# init SQLAlchemy parar usar em outras partes do código
 db = SQLAlchemy()
 
 def create_app():
