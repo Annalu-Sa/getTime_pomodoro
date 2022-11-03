@@ -25,14 +25,14 @@ def create_app():
 
     @login_manager.user_loader
     def load_user(user_id):
-        # since the user_id is just the primary key of our user table, use it in the query for the user
+        # user_id é utilizada para consulta de user, já que é primary key da tabela de usuários
         return User.query.get(int(user_id))
 
-    # blueprint for auth routes in our app
+    # blueprint para rota de autentificação no app
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    # blueprint for non-auth parts of app
+    # blueprint para rota de não autentificação no app
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
