@@ -2,8 +2,8 @@
 # Classe para criar páginas de web que apenas usuários autenticados conseguem acessar, organização e manutenção 
 
 
-from flask import Blueprint, render_template, redirect, url_for, request, flash
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Blueprint, render_template, redirect, url_for, request, flash #Biblioteca utilizada para criar sections, "subsites", separar os templates
+from werkzeug.security import generate_password_hash, check_password_hash  #Sistema de checagem de senhas; segurança;WSGI
 from flask_login import login_user, logout_user, login_required
 from .models import User
 from . import db
@@ -48,7 +48,7 @@ def signup_post():
     password = request.form.get('password')
 
     user = User.query.filter_by(email=email).first() 
-    # Se isso retornar um usu[ario, então o email já existe no Banco de Dados
+    # Se isso retornar um usuario, então o email já existe no Banco de Dados
 
     if user: 
         # Se um usuário existente é encontrado, 
