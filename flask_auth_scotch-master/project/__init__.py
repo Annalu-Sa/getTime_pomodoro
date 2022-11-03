@@ -3,9 +3,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
+#LoginManager library para utilização de sistema login
 #SQLalchemy trabalha com banco de dados 
 
-# init SQLAlchemy parar usar em outras partes do código
+# init SQLAlchemy para usar em outras partes do código
 db = SQLAlchemy()
 
 def create_app():
